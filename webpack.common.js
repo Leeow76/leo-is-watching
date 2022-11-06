@@ -42,13 +42,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      projectName: 'React three fiber game',
+      projectName: 'Face scan project',
       template: 'src/index.html',
     }),
     new CopyWebpackPlugin({
       patterns: [
         { from: 'src/assets', to: 'assets' },
-        { from: 'pwa', to: '' },
         { from: 'src/favicon.ico', to: '' },
       ],
     }),
