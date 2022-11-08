@@ -1,10 +1,9 @@
-import React from "react"
-
-import { Canvas } from '@react-three/fiber'
+import Face from './components/Face'
+import TargetScreen from './components/TargetScreen'
 import { Stats } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
 import { Leva } from 'leva'
-import Face from "./components/Face"
-import TargetScreen from "./components/TargetScreen"
+import React from 'react'
 
 const App = () => {
   return (
@@ -16,11 +15,13 @@ const App = () => {
         <Face />
         <TargetScreen />
       </Canvas>
-      <Leva theme={{
-        sizes: {
-          rootWidth: '400px',
-        }
-      }} />
+      <Leva
+        theme={{
+          sizes: {
+            rootWidth: '400px',
+          },
+        }}
+      />
     </>
   )
 }

@@ -1,7 +1,7 @@
-import { ThreeEvent } from "@react-three/fiber"
-import React, { useCallback } from "react"
-import * as THREE from "three"
-import { useStore } from "../store"
+import { useStore } from '../store'
+import { ThreeEvent } from '@react-three/fiber'
+import React, { useCallback } from 'react'
+import * as THREE from 'three'
 
 const TargetScreen = () => {
   const setHoverPoint = useCallback((e: ThreeEvent<PointerEvent>) => {
@@ -9,13 +9,8 @@ const TargetScreen = () => {
   }, [])
 
   return (
-    <mesh
-      position={[0, 0, 1]}
-      onPointerMove={(e) => setHoverPoint(e)}
-    >
-      <planeGeometry
-        args={[2, 2, 1]}
-      />
+    <mesh position={[0, 0, 1]} onPointerMove={(e) => setHoverPoint(e)}>
+      <planeGeometry args={[2, 2, 1]} />
       <meshBasicMaterial
         color={'#fff'}
         transparent
