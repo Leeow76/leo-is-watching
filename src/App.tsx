@@ -1,9 +1,9 @@
 import Face from './components/Face'
 import TargetScreen from './components/TargetScreen'
-import { Stats } from '@react-three/drei'
+import { Loader, Stats } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Leva } from 'leva'
-import React from 'react'
+import React, { Suspense } from 'react'
 
 const App = () => {
   return (
@@ -12,9 +12,14 @@ const App = () => {
         <color attach="background" args={['#1a1a1a']} />
         <Stats />
         <ambientLight />
-        <Face />
-        <TargetScreen />
+        <Suspense fallback={null}>
+          <Face />
+          <TargetScreen />
+        </Suspense>
       </Canvas>
+
+      <Loader />
+
       <Leva
         theme={{
           sizes: {
